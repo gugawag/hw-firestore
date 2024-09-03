@@ -9,6 +9,14 @@ import {MaterialModule} from "../material/material.module";
 import { ListagemUsuariosTabelaComponent } from './listagem-usuarios-tabela/listagem-usuarios-tabela.component';
 import {SweetAlert2Module} from "@sweetalert2/ngx-sweetalert2";
 import {HttpClientModule} from "@angular/common/http";
+import {
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderCellDef,
+  MatTable,
+  MatTableModule
+} from "@angular/material/table";
 
 
 
@@ -21,7 +29,8 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserAnimationsModule,
     MaterialModule,
     SweetAlert2Module,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
   ],
   exports: [ManterUsuarioComponent, ListagemUsuarioComponent]
 })
