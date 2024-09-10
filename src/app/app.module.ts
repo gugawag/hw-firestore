@@ -10,11 +10,11 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatButtonModule} from "@angular/material/button";
-import {MatIcon, MatIconModule} from "@angular/material/icon";
-import {ListagemUsuarioComponent} from "./usuario/listagem-usuario/listagem-usuario.component";
-import {ManterUsuarioComponent} from "./usuario/cadastro-usuario/manter-usuario.component";
+import { MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
 import {UsuarioModule} from "./usuario/usuario.module";
+import {AngularFireModule} from "@angular/fire/compat";
+import {FirestoreModule} from "./shared/firestore/firestore.module";
 
 @NgModule({
     declarations: [
@@ -31,7 +31,8 @@ import {UsuarioModule} from "./usuario/usuario.module";
         BrowserAnimationsModule,
         MatMenuModule,
         MatIconModule,
-        UsuarioModule
+        UsuarioModule,
+        FirestoreModule
     ],
     providers: [
         provideAnimationsAsync()

@@ -3,6 +3,7 @@ import {Usuario} from "../../shared/model/usuario";
 import {Router} from "@angular/router";
 import {UsuarioRestService} from "../../shared/services/usuario-rest.service";
 import {Observable, of} from "rxjs";
+import {UsuarioFirestoreService} from "../../shared/services/usuario-firestore.service";
 
 @Component({
     selector: 'app-listagem-usuario',
@@ -13,7 +14,7 @@ export class ListagemUsuarioComponent {
 
     usuarios: Usuario[] = [];
 
-    constructor(private roteador: Router, private usuarioService: UsuarioRestService) {
+    constructor(private roteador: Router, private usuarioService: UsuarioFirestoreService) {
         usuarioService.listar().subscribe(
             {
                 next: usuariosRetornados => this.usuarios = usuariosRetornados,
