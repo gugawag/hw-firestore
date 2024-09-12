@@ -9,6 +9,7 @@ import {Observable, throwError} from "rxjs";
 export class UsuarioRestService {
 
   URL_USUARIOS = 'http://localhost:3000/usuarios';
+  // URL_USUARIOS = 'https://firestore.googleapis.com/v1beta1/projects/pw20241/databases/(default)/documents/usuarios/';
   constructor(private httpClient: HttpClient) { }
 
   listar(): Observable<Usuario[]> {

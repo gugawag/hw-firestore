@@ -17,7 +17,8 @@ import {
   MatTable,
   MatTableModule
 } from "@angular/material/table";
-
+import {PipesModule} from "../shared/pipes/pipes.module";
+import {AngularFireModule} from "@angular/fire/compat";
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {
     MaterialModule,
     SweetAlert2Module,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    PipesModule,
   ],
   exports: [ManterUsuarioComponent, ListagemUsuarioComponent]
 })

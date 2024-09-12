@@ -9,7 +9,7 @@
 
     <ng-container matColumnDef="nome">
         <th mat-header-cell *matHeaderCellDef>Nome</th>
-        <td mat-cell *matCellDef="let usuario">{{ usuario.nome }}</td>
+        <td mat-cell *matCellDef="let usuario">{{ usuario.nome | primeiroNome | titlecase}}</td>
     </ng-container>
 
     <ng-container matColumnDef="idade">
